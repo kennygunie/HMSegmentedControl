@@ -283,6 +283,16 @@
             
             titleLayer.contentsScale = [[UIScreen mainScreen] scale];
             [self.scrollView.layer addSublayer:titleLayer];
+            
+            
+            // Border
+            CGFloat borderHeight = roundf(CGRectGetHeight(self.scrollView.frame));
+            CGFloat borderX = roundf(self.segmentWidth *idx);
+            CALayer *boderLayer = [CALayer layer];
+            boderLayer.frame = CGRectMake(borderX, 0, 1, borderHeight);
+            boderLayer.borderColor = self.sectionBorderColor.CGColor;
+            boderLayer.borderWidth = self.sectionborderWidth;
+            [self.scrollView.layer addSublayer:boderLayer];
         }];
     } else if (self.type == HMSegmentedControlTypeImages) {
         [self.sectionImages enumerateObjectsUsingBlock:^(id iconImage, NSUInteger idx, BOOL *stop) {
