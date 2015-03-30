@@ -86,6 +86,9 @@ typedef enum {
  */
 @property (nonatomic, strong) UIColor *selectionIndicatorColor;
 
+@property (nonatomic) UIColor *sectionBorderColor;
+@property (nonatomic) CGFloat sectionborderWidth;
+
 /*
  Opacity for the seletion inficator box.
  
