@@ -273,7 +273,9 @@
             titleLayer.fontSize = self.font.pointSize;
             titleLayer.alignmentMode = kCAAlignmentCenter;
             titleLayer.string = titleString;
-            titleLayer.truncationMode = kCATruncationEnd;
+            if ([UIDevice currentDevice].systemVersion.floatValue < 10.0 ) {
+                titleLayer.truncationMode = kCATruncationEnd;
+            }
             
             if (self.selectedSegmentIndex == idx) {
                 titleLayer.foregroundColor = self.selectedTextColor.CGColor;
@@ -358,7 +360,9 @@
             titleLayer.fontSize = self.font.pointSize;
             titleLayer.alignmentMode = kCAAlignmentCenter;
             titleLayer.string = self.sectionTitles[idx];
-            titleLayer.truncationMode = kCATruncationEnd;
+            if ([UIDevice currentDevice].systemVersion.floatValue < 10.0 ) {
+                titleLayer.truncationMode = kCATruncationEnd;
+            }
 			
             CALayer *imageLayer = [CALayer layer];
             imageLayer.frame = imageRect;
