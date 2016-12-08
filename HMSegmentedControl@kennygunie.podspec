@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HMSegmentedControl@kennygunie"
-  s.version      = "1.4.2"
+  s.version      = "1.4.3"
   s.summary      = "fork of kocoai"
   s.homepage     = "https://github.com/kocoai/HMSegmentedControl"
   s.license      = { :type => 'MIT', :file => 'LICENSE.md' }
